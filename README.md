@@ -4,7 +4,7 @@
 
 ![SiteMap](sitemap.png)
 
-<p> Listagem das páginas:
+<p> Listagem das páginas: <br>
 - index.html = Home page <br>
 - jogos.html = Página de Jogos <br>
 - informações-jogos.html = Página de Informações Sobre Os Jogos <br>
