@@ -2,4 +2,14 @@
 
 <h2>Nosso site map no Figma: </h2>
 
-![sitemap](https://github.com/GabiDeutner/site-boardgames/assets/45831598/06482315-9e44-4b6d-b75f-94239115147a)
+![SiteMap](sitemap.png)
+
+<p> Listagem das páginas:
+- index.html = Home page
+- jogos.html = Página de Jogos
+- informações-jogos.html = Página de Informações Sobre Os Jogos
+- produtos.html = Loja Online
+
+
+
+</p>
