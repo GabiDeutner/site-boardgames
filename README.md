@@ -8,8 +8,4 @@
 - index.html = Home page <br>
 - jogos.html = Página de Jogos <br>
 - informações-jogos.html = Página de Informações Sobre Os Jogos <br>
-- produtos.html = Loja Online <br>
-
-
-
 </p>
