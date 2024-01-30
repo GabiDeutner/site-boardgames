@@ -6,35 +6,30 @@
     <meta name="keywords" content="games, jogos, jogos de tabuleiro, boardgames">
     <meta name="description" content="Os melhores jogos de tabuleiro estão aqui">
     <title>Rankings de Jogos - O Guia do Mochileiro dos Games</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts: Roboto Regular 400 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <header>
-        <img src="images/logos/mochileiro-dos-games.png" alt="Logo Guia do Mochileiro dos Games">
+        <img class="logo-header" src="images/Logo-NegativeWhite.png" alt="Logo Guia do Mochileiro dos Games">
         <nav>
-            <ul>
+            <ul class="navbar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="jogos.html" target="_self">Jogos</a></li>
-                    <ul>
-                        <li><a href="informacoes.html" target="_self">Informações</a></li>
-                        <li><a href="rankings.html" target="_self">Rankings</a></li>
-                        <li><a href="perfil.html" target="_self">Perfil de Jogos</a></li>
-                    </ul>
                 <li><a href="noticias.html" target="_self">Notícias</a></li>
-                    <ul>
-                        <li><a href="novidades.html" target="_self">Novidades</a></li>
-                        <li><a href="eventos.html" target="_self">Eventos</a></li>
-                        <li><a href="criadores-de-conteudo.html" target="_self">Criadores de Conteúdo</a></li>
-                    </ul>
                 <li><a href="loja.html" target="_self">Loja</a></li>
-                    <ul>
-                        <li><a href="produtos.html" target="_self">Produtos</a></li>
-                        <li><a href="publicadores.html" target="_self">Publicadores</a></li>
-                    </ul>
                 <li><a href="sobre.html" target="_self">Sobre</a></li>
                 <li><a href="contato.html" target="_self">Contato</a></li>
             </ul>
         </nav>
     </header>
+
 
     <section>
         <div>
@@ -43,60 +38,86 @@
     </section>
 
     <section>
-        <div><h3>Top 5 melhores Jogos de Estratégia: </h3></div>
-        <ol>
-            <li><a href="#">Nome do Jogo 1</a></li>
-            <li><a href="#">Nome do Jogo 2</a></li>
-            <li><a href="#">Nome do Jogo 3</a></li>
-            <li><a href="#">Nome do Jogo 4</a></li>
-            <li><a href="#">Nome do Jogo 5</a></li>
-        </ol>
-    </section>
-
-    <section>
-        <div>
-            <p>Descrição dos Rankings</p>
-        </div>
-    </section>
-
-    <section>
-        <div><h3>Top 5 melhores Jogos de Estratégia: </h3></div>
-        <ol>
-            <li><a href="#">Nome do Jogo 1</a></li>
-            <li><a href="#">Nome do Jogo 2</a></li>
-            <li><a href="#">Nome do Jogo 3</a></li>
-            <li><a href="#">Nome do Jogo 4</a></li>
-            <li><a href="#">Nome do Jogo 5</a></li>
-        </ol>
-    </section>
-
-    <footer>
-        <div>
-            <img src="images/logos/mochileiro-dos-games.png" alt="Logo Guia do Mochileiro dos Games">
-        </div>
-        <div>
+        <article>
+            <div class="imagem-ranking"> <img src="images/tokaido1.png" alt="Imagem do Jogo Tokaido"> </div>
+            <div class="titulo-ranking"><h3>Top 5 melhores Jogos de Estratégia: </h3></div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="jogos.html" target="_self">Jogos</a></li>
-                <li><a href="noticias.html" target="_self">Notícias</a></li>
-                <li><a href="loja.html" target="_self">Loja</a></li>
-                <li><a href="sobre.html" target="_self">Sobre</a></li>
-                <li><a href="contato.html" target="_self">Contato</a></li>
-            </ul>
+                <li><a href="#">#Top 1: Tokaido</a></li>
+                <li><a href="#">#Top 2: Terraforming Mars</a></li>
+                <li><a href="#">#Top 3: 7 Wonders</a></li>
+                <li><a href="#">#Top 4: Zombicide</a></li>
+                <li><a href="#">#Top 5: Betrayal</a></li>
+            </ul>  
+
+            <div class="botao-loja">
+                <a href="jogos/loja.html" target="_self">Ir Para a Loja</a>
+            </div>
+        </article>
+
+
+        <article>
+            <div class="imagem-ranking"> <img src="images/tokaido1.png" alt="Imagem do Jogo Tokaido"> </div>
+            <div class="titulo-ranking"><h3>Top 5 melhores Jogos Competitivos: </h3></div>
+            <ul>
+                <li><a href="#">#Top 1: Coup</a></li>
+                <li><a href="#">#Top 2: Dixit</a></li>
+                <li><a href="#">#Top 3: Duel</a></li>
+                <li><a href="#">#Top 4: Hidden Leaders</a></li>
+                <li><a href="#">#Top 5: Sim, Mestre das Trevas!</a></li>
+            </ul>  
+
+            <div class="botao-loja">
+                <a href="jogos/loja.html" target="_self">Ir Para a Loja</a>
+            </div>
+        </article>
+    </section>    
+
+    <article>
+        <h2 class="titulo-destaques">Destaques da Loja</h2>
+
+        <div class="loja-jogo1">
+            <h3 class="titulo-jogo1">Jogo Dixit (8 Jogadores)</h3>
+            <p>por R$ 249,99 <br>
+            R$ 232,49 no PIX <br>
+            10x R$ 25,00</p>
+            
+            <div class="botao-home-comprar">
+                <a href="loja.html" target="_self">Comprar</a>
+            </div>
         </div>
-        <div>
-            <p>Segurança de Ecommerce</p>
-            <p>Métodos de Pagamento</p>
+        
+
+        <div class="loja-jogo2">
+            <h3 class="titulo-jogo2">Jogo Catan (4 Jogadores)</h3>
+            <p>por R$ 249,99 <br>
+            R$ 232,49 no PIX <br>
+            10x R$ 25,00</p>
+            
+            <div class="botao-home-comprar">
+                <a href="loja.html" target="_self">Comprar</a>
+            </div>
         </div>
-        <div>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Twitter</p>
-            <p>TikTok</p>
-            <p>Youtube</p>
+
+        <div class="loja-jogo3">
+            <h3 class="titulo-jogo3">Zombicide (6 Jogadores)</h3>
+            <p>por R$ 249,99 <br>
+            R$ 232,49 no PIX <br>
+            10x R$ 25,00</p>
+            
+            <div class="botao-home-comprar">
+                <a href="loja.html" target="_self">Comprar</a>
+            </div>
         </div>
-        <p>O Guia do Mochileiro dos Games &copy; 2024</p>
-        <p>CNPJ 00.000.000/0000-00</p>
-    </footer>
+
+
+        <div><a href="loja.html" target="_self">veja mais</a></div>
+    </article>
+
+</section>
+
+<footer>
+    <p>O Guia do Mochileiro dos Games &copy; 2024</p>
+    <p>CNPJ 00.000.000/0000-00</p>
+</footer>
 </body>
 </html>
