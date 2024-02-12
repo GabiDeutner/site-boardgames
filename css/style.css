@@ -1,0 +1,58 @@
+* { margin: 0; padding: 0; }
+
+body {
+    background-color: #000000 !important;
+}
+.navbar {
+    background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+}
+.nav_logo {
+    display: flex;
+    width: 260px;
+    height: 79.857px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* --- Start - Navbar --- */
+
+.navbar-container {
+    max-width: 1440px;
+    color: #ffffff;
+}
+.nav-item a {
+    color: #ffffff;
+}
+.nav-item .active {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* --- End - Navbar --- */
+
+/* --- Start - General --- */
+
+.border_radius {
+    border-radius: 20px;
+}
+
+/* --- End - General --- */
+
+/* --- Start - Home Features --- */
+
+#home_destaques {
+    margin-top: 50px;
+}
+
+.home_carrossel {
+    background-color: #898989;
+    height: 100%;
+}
+
+.home_ranking {
+    background-color: #c2c2c2;
+    height: 100%;
+}
+
+/* --- End - Home Features --- */
