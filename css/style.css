@@ -31,28 +31,65 @@ body {
 
 /* --- End - Navbar --- */
 
-/* --- Start - General --- */
+.container-jogos-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px 100px;
+  }
+  
+  .imagem-container {
+      width: 100%;
+      height: 50%;
+    }
+  
+  .imagem-container img{
+      border-radius: 10px;    
+    }
+  
+    .ranking-home{
+      padding: 0;
+      width: 250px;
+      height: 373px;
+      border-radius: 20px;
+      background: #4E1458;
+      color: white;
+    }
+  
+    .top-ranking{
+      font-weight: bold;
+    }
+  
+    .titulo-ranking{
+      text-align: center;
+      width: 250px;
+      height: 50px;
+      border-radius: 20px 20px 0px 0px;
+      background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+      margin: 0;
+    }
+  
+    .titulo-ranking-text {
+      margin: 0;
+      padding: 1em;
+    }
 
-.border_radius {
-    border-radius: 20px;
-}
-
-/* --- End - General --- */
-
-/* --- Start - Home Features --- */
-
-#home_destaques {
-    margin-top: 50px;
-}
-
-.home_carrossel {
-    background-color: #898989;
-    height: 100%;
-}
-
-.home_ranking {
-    background-color: #c2c2c2;
-    height: 100%;
-}
-
-/* --- End - Home Features --- */
+    .lista-ranking{
+        margin: 0;
+        padding: 1em;
+        font-size: 14.5px;
+    }
+  
+    .botao-home{      
+        align-items: center;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+  
+    .botao-home a {
+      text-decoration: none;
+      color: inherit;
+    }
