@@ -80,6 +80,12 @@ header{
     height: 50px;
     border-radius: 20px 20px 0px 0px;
     background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+    margin: 0;
+  }
+
+  .titulo-ranking-text {
+    margin: 0;
+    padding: 1em;
   }
 
   .botao-home{
