@@ -121,3 +121,37 @@ header{
     text-decoration: none;
     color: inherit;
   }
+
+  .titulo-noticias{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+
+
+  .item2{
+    background-color: #012A3D;
+    border-radius: 5px 5px 0px 0px;
+    padding: 2px 60px;
+  }
+
+  .item{
+    background-color: black;
+  }
+
+  .noticias-article{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 5fr 5fr 1fr;
+    background-color: #012A3D;
+    padding: 20px;
+  }
+
+  .noticia{
+    background-color: white;
+    margin: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    color: black;
+  }
