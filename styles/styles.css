@@ -142,10 +142,14 @@ header{
 
   .noticias-article{
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 5fr 5fr 1fr;
     background-color: #012A3D;
     padding: 20px;
+  }
+
+  .img-noticia{
+    border-radius: 10px;
   }
 
   .noticia{
@@ -156,9 +160,6 @@ header{
     color: black;
   }
   
-  .img-noticia{
-    border-radius: 10px;
-  }
 
   .text-noticia{
     margin: 10px;
