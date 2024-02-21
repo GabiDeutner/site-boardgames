@@ -46,16 +46,11 @@ header{
 
 
 .container-jogos-home{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 30px 80px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 30px 120px;
 }
-
-.imagem-container {
-    width: 80%;
-    height: 50%;
-  }
 
 .imagem-container img{
     border-radius: 10px;    
@@ -64,8 +59,7 @@ header{
   .ranking-home{
     padding: 0;
     width: 250px;
-    height: 355px;
-    flex-shrink: 0;
+    height: 372px;
     border-radius: 20px;
     background: #4E1458;
   }
@@ -88,12 +82,39 @@ header{
     padding: 1em;
   }
 
-  .botao-home{
+  .corpo-ranking {
+    font-size: 16px;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 2fr;
+}
+
+  .corpo-ranking li{
+    list-style-type: none;
+    line-height: 1.5;
+  }
+
+
+  .botao-home {
+    padding: 30px;
     text-align: center;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 700;
-    line-height: 120%; /* 16.8px */
+    line-height: 120%;
+  }
+
+  .linha-botao-jogos{
+    background-color: #9b33ad;
+    padding: 8px 30px;
+    border-radius:80px;
+    text-align: center;
+  }
+
+  .linha-botao-jogos:hover{
+    background-color: #552ce9;
+    transition-delay: 0.07s;
   }
 
   .botao-home a {
