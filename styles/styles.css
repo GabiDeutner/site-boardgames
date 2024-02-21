@@ -155,3 +155,12 @@ header{
     border-radius: 15px;
     color: black;
   }
+  
+  .img-noticia{
+    border-radius: 10px;
+  }
+
+  .text-noticia{
+    margin: 10px;
+    text-align: center;
+  }
