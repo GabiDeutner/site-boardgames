@@ -165,3 +165,142 @@ header{
     margin: 10px;
     text-align: center;
   }
+
+  .linha-botao-jogos-2{
+    background-color: #FFC107;
+    padding: 8px 30px;
+    border-radius:30px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .linha-botao-jogos-2:hover{
+    background-color: #836200;
+    transition-delay: 0.07s;
+  }
+
+  .botao-home-2 {
+    padding: 30px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .botao-home-2 a {
+    text-decoration: none;
+    color: black;
+  }
+
+    .titulo-destaques{
+    background-color: #012A3D;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+  }
+
+
+  .item4{
+    background-color: black;
+    border-radius: 5px 5px 0px 0px;
+    padding: 2px 60px;
+  }
+
+  .loja-article{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5fr 5fr 1fr;
+    padding: 20px;
+    justify-items: center;
+  }
+
+  .loja-jogo{
+    border: 0.5px solid white;
+    margin: 30px;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+  }
+
+  .img-loja{
+    border-radius: 10px;
+  }
+
+  .text-destaque{
+    margin: 10px;
+  }
+
+  .preco-antigo{
+    color:#FFC107;
+  }
+
+  .text-destaque{
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+  }
+
+  .linha-botao-comprar{
+    background-color: #9CCF19;
+    padding: 8px 30px;
+    border-radius:30px;
+    text-align: center;
+  }
+
+  .linha-botao-comprar:hover{
+    background-color: #668712;
+    transition-delay: 0.07s;
+  }
+
+  .botao-home-comprar {
+    display: flex;
+    padding: 30px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .botao-home-comprar a {
+    align-content: center;
+    text-decoration: none;
+    color: black;
+    padding-top: 11px;
+  }
+
+  .img-carrinho{
+    background-color:#9CCF19;
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: -25px;
+    border: 0.2px solid #668712; 
+  }
+
+
+  .linha-botao-loja-2{
+    background-color: #FFC107;
+    padding: 8px 30px;
+    border-radius:30px;
+    text-align: center;
+  }
+
+  .linha-botao-loja-2:hover{
+    background-color: #836200;
+    transition-delay: 0.07s;
+  }
+
+  .botao-loja-2 {
+    padding: 30px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .botao-loja-2 a {
+    text-decoration: none;
+    color: black;
+  }
