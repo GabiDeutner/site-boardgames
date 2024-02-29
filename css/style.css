@@ -1,0 +1,95 @@
+* { margin: 0; padding: 0; }
+
+body {
+    background-color: #000000 !important;
+}
+.navbar {
+    background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+}
+.nav_logo {
+    display: flex;
+    width: 260px;
+    height: 79.857px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* --- Start - Navbar --- */
+
+.navbar-container {
+    max-width: 1440px;
+    color: #ffffff;
+}
+.nav-item a {
+    color: #ffffff;
+}
+.nav-item .active {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* --- End - Navbar --- */
+
+.container-jogos-home{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px 100px;
+  }
+  
+  .imagem-container {
+      width: 100%;
+      height: 50%;
+    }
+  
+  .imagem-container img{
+      border-radius: 10px;    
+    }
+  
+    .ranking-home{
+      padding: 0;
+      width: 250px;
+      height: 373px;
+      border-radius: 20px;
+      background: #4E1458;
+      color: white;
+    }
+  
+    .top-ranking{
+      font-weight: bold;
+    }
+  
+    .titulo-ranking{
+      text-align: center;
+      width: 250px;
+      height: 50px;
+      border-radius: 20px 20px 0px 0px;
+      background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+      margin: 0;
+    }
+  
+    .titulo-ranking-text {
+      margin: 0;
+      padding: 1em;
+    }
+
+    .lista-ranking{
+        margin: 0;
+        padding: 1em;
+        font-size: 14.5px;
+    }
+  
+    .botao-home{      
+        align-items: center;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+  
+    .botao-home a {
+      text-decoration: none;
+      color: inherit;
+    }
