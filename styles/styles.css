@@ -7,37 +7,72 @@ body {
     padding: 0;
     background-color: black;
     font-family: 'Roboto', sans-serif;
+    font-feature-settings: 'liga' off;
+    font-style: normal;
     color: white;
+    min-width: 400px;
 }
-
 header {
     display: flex;
     width: auto;
     height: 100px;
     justify-content: center;
     align-items: center;
-
-    /* Estou retirando o gap para ser responsivo utilizando flex + justify-content (com a criacao da div header-container) 
-    gap: 480px; */ /*gap entre o logo e o menu*/
-
     flex-shrink: 0;
-    background: var(--Degrad, linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%));
+    background: linear-gradient(90deg, #03A9F4 -0.14%, #9C27B0 100.14%);
 }
-
 .header-container {
   width: 100%;
+  height: 100%;
   max-width: 1440px;
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
 }
+.text-nowrap {
+  white-space: nowrap;
+}
+.botao-mais {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.botao-mais a {
+  background-color: #FFC107;
+  padding: 8px 30px;
+  border-radius:30px;
+  text-align: center;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  text-decoration: none;
+  color: black;
+}
+.botao-mais a:hover {
+  animation-duration: 1s;
+  animation-name: botao-brilho ;
+  animation-iteration-count: infinite;
+}
+/* glowing for buttons */
 
-.logo-header {
-    width: 260px;
-    height: 79.857px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+@keyframes botao-brilho {
+  0% {
+    -webkit-box-shadow:0px 0px 0px 0px #ffc107;
+    -moz-box-shadow: 0px 0px 0px 0px #ffc107;
+    box-shadow: 0px 0px 0px 0px #ffc107;
+  }
+  50% {
+    -webkit-box-shadow:0px 0px 15px 0px #ffc107;
+    -moz-box-shadow: 0px 0px 15px 0px #ffc107;
+    box-shadow: 0px 0px 15px 0px #ffc107;
+  }
+  100% {
+    -webkit-box-shadow:0px 0px 0px 0px #ffc107;
+    -moz-box-shadow: 0px 0px 0px 0px #ffc107;
+    box-shadow: 0px 0px 0px 0px #ffc107;
+  }
 }
 
 /* section titles */
@@ -59,25 +94,65 @@ header {
 
 /* ----- End - General ----- */
 
-/* ----- Start - Navbar ----- */
+/* ----- Start - Header ----- */
+
+/* Fixed header */
+
+header {
+  position: fixed;
+  width: 100%;
+  /* Drop shadow */
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.5);
+}
+main {
+  padding-top: 100px;
+}
+
+/* Logo */
+
+.logo-header {
+  width: 260px;
+  height: 79.857px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin: auto auto auto 0;
+}
+
+/* Nav */
 
 .header-container > nav {
   display: flex;
   align-items: center;
 }
 
-.navbar{
-    display: flex;
-    gap: 20px;
-    list-style-type: none;
-    color: #FFF;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%; /* 24px */
-    letter-spacing: -0.176px;
+.navbar , .navbar li , .header-container a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+.navbar {
+  list-style-type: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.navbar li {
+  padding: 0 20px;
+  background: none;
+}
+
+.navbar li:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 10%, rgba(255, 255, 255, 0.15) 40%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.00) 90%);
 }
 
 .navbar a {
@@ -85,7 +160,17 @@ header {
     color: inherit;
 }
 
-/* ----- End - Navbar ----- */
+.navbar li:hover a {
+  font-weight: 600;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* ----- End - Header ----- */
 
 /* ----- Start - Home ----- */
 
@@ -102,24 +187,52 @@ header {
   width: 100%;
   margin: 50px;
   display: grid;
-    column-gap: 30px;
+    gap: 30px;
     grid-template-columns: 9fr 3fr;
     grid-template-rows: 1fr;
   height: 515px;
 }
-
 .destaque-carrossel {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  overflow: hidden;    
+  overflow: hidden;
+  display: flex; /* Adicionando um layout flexível */
+  position: relative; /* Permitindo um posicionamento relativo para os botões */
+  justify-content: center;
 }
+
 .destaque-jogo {
   width: 100%;
   height: 100%;
-  background-image: url(../images/terraforming-mars-image.jpg);
   background-position: center;
   background-size: cover;
+  display: none;
+  flex: 0 0 100%; /* Definindo a largura das imagens */
+  margin-right: 10px; /* Adicionando margem entre as imagens */
+  z-index: -999;
+}
+
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 5px;
 }
 
   .ranking-home {
@@ -131,11 +244,11 @@ header {
     background: #4E1458;
   }
 
-  .top-ranking {
+  .ranking-top {
     font-weight: bold;
   }
 
-  .titulo-ranking {
+  .ranking-titulo {
     text-align: center;
     width: 100%;
     height: 50px;
@@ -143,12 +256,12 @@ header {
     margin: 0;
   }
 
-  .titulo-ranking-text {
+  .ranking-titulo-text {
     margin: 0;
     padding: 1em;
   }
 
-  .corpo-ranking {
+  .ranking-corpo {
     margin: 0;
     padding: 30px;
     font-size: 16px;
@@ -158,12 +271,12 @@ header {
     justify-content: space-between;
 }
 
-  .corpo-ranking li {
+  .ranking-corpo li {
     list-style-type: none;
     line-height: 1.5;
   }
 
-  .botao-home {
+  .home-botao {
     margin:auto;
     padding: 30px;
     text-align: center;
@@ -173,22 +286,46 @@ header {
     line-height: 120%;
   }
 
-  .linha-botao-jogos {
+  .ranking-botao {
     background-color: #9b33ad;
     padding: 8px 30px;
     border-radius:80px;
     text-align: center;
   }
 
-  .linha-botao-jogos:hover {
-    background-color: #552ce9;
-    transition-delay: 0.07s;
+  .ranking-botao:hover {
+    animation-duration: 1s;
+    animation-name: botao-brilho ;
+    animation-iteration-count: infinite;
   }
 
-  .botao-home a {
+  .home-botao a {
     text-decoration: none;
     color: inherit;
     white-space: nowrap;
+  }
+
+  /* destaques - responsividade */
+  
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .container-jogos-home {
+      margin: 50px;
+      display: grid;
+        gap: 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: 350px auto;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container-jogos-home {
+      margin: 50px;
+      display: grid;
+        gap: 30px;
+        grid-template-columns: 100%;
+        grid-template-rows: 350px auto;
+      height: auto;
+    }
   }
 
   /* Noticias */
@@ -197,7 +334,7 @@ header {
     background-color: #012A3D;
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin: 40px 0 0 0;
   }
 
   .noticias-container {
@@ -214,17 +351,8 @@ header {
     width: 100%;
   }
 
-  .item {
-    background-color: black;
-  }
-
-  .item2 {
-    background-color: #012A3D;
-    border-radius: 5px 5px 0px 0px;
-    padding: 2px 60px;
-  }
-
   .noticias-article {
+    width: 100%;
     margin: 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -233,50 +361,66 @@ header {
     row-gap: 50px;
   }
 
-  .img-noticia {
-    border-radius: 10px;
+  .noticia {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #FFF;
+    overflow: visible;
     width: 100%;
     height: auto;
+    margin-bottom: 15px;
   }
 
-  .noticia {
-    background-color: white;
-    padding: 5px;
-    border-radius: 15px;
-    color: black;
+  .noticia-img {
+    border-radius: 20px;
+    border: 4px solid #FFF;
+    height: 175px;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
-
-  .text-noticia {
-    margin: 10px;
-    text-align: center;
+  .noticia-text {
+    color: #1A1A1A;
+    padding: 15px;
   }
-
-  .linha-botao-jogos-2 {
-    background-color: #FFC107;
-    padding: 8px 30px;
-    border-radius:30px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .linha-botao-jogos-2:hover {
-    background-color: #836200;
-    transition-delay: 0.07s;
-  }
-
-  .botao-home-2 {
-    display: flex;
-    justify-content: center;
-  }
-
-  .botao-home-2 a {
-    font-family: Roboto;
-    font-size: 14px;
+  .noticia-text h3 {
+    font-size: 22px;
     font-weight: 700;
     line-height: 120%;
+  }
+  .noticia-text p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .noticia-botao {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+  .noticia-botao a {
+    margin: 10px auto -15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: 4px solid #FFF;
+    background: #9C27B0;
+    color: #FFF;
+    line-height: 1;
     text-decoration: none;
-    color: black;
+  }
+  .noticia-botao a:hover {
+    animation-duration: 1s;
+    animation-name: botao-brilho ;
+    animation-iteration-count: infinite;
   }
 
   .titulo-destaques {
@@ -287,10 +431,25 @@ header {
     justify-items: center;
   }
 
-  .item4 {
-    background-color: black;
-    border-radius: 5px 5px 0px 0px;
-    padding: 2px 60px;
+  /* noticias - responsividade */
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .noticias-article {
+      margin: 40px 0;
+      display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .noticias-article {
+      margin: 40px 0;
+      display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 
  /* Loja */
@@ -311,101 +470,248 @@ header {
     background-color: #000000;
   }
 
+  .loja-container > article {
+    width: 100%;
+  }
+
   .loja-article {
+    width: 100%;
+    margin: 40px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 5fr 5fr 1fr;
-    padding: 20px;
-    justify-items: center;
+    column-gap: 30px;
+    row-gap: 50px;
   }
-
   .loja-jogo {
-    border: 0.5px solid white;
-    margin: 30px;
-    border-radius: 15px;
-    padding: 5px;
-    color: white;
-  }
-
-  .img-loja {
-    border-radius: 10px;
-  }
-
-  .text-destaque {
-    margin: 10px;
-  }
-
-  .preco-antigo {
-    color:#FFC107;
-  }
-
-  .text-destaque {
-    display: grid;
-    grid-template-columns: 5fr 3fr;
-  }
-
-  .linha-botao-comprar {
-    background-color: #9CCF19;
-    padding: 8px 30px;
-    border-radius:30px;
-    text-align: center;
-  }
-
-  .linha-botao-comprar:hover {
-    background-color: #668712;
-    transition-delay: 0.07s;
-  }
-
-  .botao-home-comprar {
     display: flex;
-    padding: 30px;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 120%;
-  }
-
-  .botao-home-comprar a {
-    align-content: center;
-    text-decoration: none;
-    color: black;
-    padding-top: 11px;
-  }
-
-  .img-carrinho {
-    background-color:#9CCF19;
+    flex-direction: column;
     border-radius: 20px;
-    padding: 5px;
-    margin-left: -25px;
-    border: 0.2px solid #668712; 
+    width: 100%;
+    height: auto;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid #808080;
+  }
+  .loja-img {
+    margin: 10px;
+    border-radius: 12px;
+    height: 220px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .loja-jogo-texto {
+    margin: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-areas:
+    "loja-jogo-titulo loja-jogo-titulo"
+    "loja-jogo-preço loja-jogo-botao";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .loja-jogo-texto h3 {
+    grid-area: loja-jogo-titulo;
+    padding: 0 15px 20px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .loja-jogo-texto p {
+    grid-area: loja-jogo-preço;
+    padding: 0 15px;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 130%;
+  }
+  .loja-jogo-texto .loja-botao-comprar {
+    grid-area: loja-jogo-botao;
+    padding: 0 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .loja-jogo-preco {
+    color:#FFC107;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 130%;
   }
 
-
-  .linha-botao-loja-2 {
-    background-color: #FFC107;
-    padding: 8px 30px;
-    border-radius:30px;
+  .loja-botao-comprar a {
+    display: flex;
+    align-items: center;
+    background-color: #9CCF19;
+    padding: 0 0 0 15px;
+    margin: 20px 0;
+    border-radius: 30px;
     text-align: center;
-  }
-
-  .linha-botao-loja-2:hover {
-    background-color: #836200;
-    transition-delay: 0.07s;
-  }
-
-  .botao-loja-2 {
-    padding: 30px;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 14px;
+    white-space: nowrap;
+    font-size: 18px;
+    font-style: normal;
     font-weight: 700;
     line-height: 120%;
+    color: #0B3806;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .loja-botao-comprar img {
+    width: 53px;
+    height: 49px;
+    margin: -7px -7px -7px 7px;
+  }
+  .loja-botao-comprar a:hover {
+    animation-duration: 1s;
+    animation-name: botao-brilho ;
+    animation-iteration-count: infinite;
   }
 
-  .botao-loja-2 a {
+  /* loja - responsividade */
+
+  @media screen and (min-width: 769px) and (max-width: 1280px) {
+    .loja-jogo-texto {
+      margin: 10px;
+      display: grid;
+      grid-template-areas:
+      "loja-jogo-titulo"
+      "loja-jogo-preço"
+      "loja-jogo-botao";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .loja-jogo-texto h3 , .loja-jogo-texto p {
+      text-align: center;
+    }
+    .loja-botao-comprar {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .loja-jogo-texto {
+      margin: 20px 10px 10px 10px;
+      display: grid;
+      grid-template-areas:
+      "loja-jogo-titulo"
+      "loja-jogo-preço"
+      "loja-jogo-botao";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    .loja-article {
+      width: 100%;
+      margin: 40px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .loja-img {
+      height: auto;
+      width: 100%;
+    }
+    .loja-jogo {
+      flex-direction: row;
+    }
+  }
+
+  /* newsletter */
+
+  #newsletter {
+    width: 100%;
+    display: flex;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #03A9F4 0%, #9C27B0 100%);
+  }
+  .newsletter-container {
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/elements/newsletter-background.svg);
+    background-position: center;
+    background-size: cover;
+  }
+  .newsletter-botao {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.45);
+    font-size: 20px;
+    font-weight: 700;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+    background: #03A9F4;
+    box-shadow: 0px 4px 0px 0px #004687;
+  }
+  .newsletter-botao a {
+    width: 100%;
+    color: #FFF;
     text-decoration: none;
-    color: black;
+  }
+
+  /* footer */
+
+  footer {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A1A1A;
+    font-size: 14px;
+    line-height: 1.4;
   }
 
 /* ----- End - Home ----- */
+
+@media screen and (max-width: 768px) {
+
+.container-jogos-home{
+  margin-top: 80px;
+}
+
+  .navbar {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+  }
+
+  .navbar.show {
+      display: flex;
+      background-color: #4E1458;
+      height: auto;
+      width: min-content;
+      border-radius: 10px;
+  }
+
+  .navbar.show li:hover {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 10%, rgba(255, 255, 255, 0.15) 40%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.00) 90%);
+  }
+
+  .navbar.show li:hover a {
+    font-weight: 600;
+  }
+
+  .navbar li {
+      margin: 10px 0;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}
