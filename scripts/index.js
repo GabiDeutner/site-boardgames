@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentSlide = 0;
     const slides = document.querySelectorAll(".destaque-jogo");
 
-    // Temporizador para avançar os slides automaticamente a cada 3 segundos
-    let slidesTimer = setInterval(nextSlide, 3000); // 3000 milissegundos = 3 segundos
+    // Temporizador para avançar os slides automaticamente a cada 10 segundos
+    let slidesTimer = setInterval(nextSlide, 10000); // 10000 milissegundos = 10 segundos
   
     function showSlide(index) {
       slides.forEach((slide, i) => {
@@ -25,14 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
       clearInterval(slidesTimer);
-      slidesTimer = setInterval(nextSlide, 3000); // 3000 milissegundos = 3 segundos
+      slidesTimer = setInterval(nextSlide, 10000); // 10000 milissegundos = 10 segundos
     }
   
     function prevSlide() {
       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(currentSlide);
       clearInterval(slidesTimer);
-      slidesTimer = setInterval(nextSlide, 3000); // 3000 milissegundos = 3 segundos
+      slidesTimer = setInterval(nextSlide, 10000); // 10000 milissegundos = 10 segundos
     }
   
     // Inicialização

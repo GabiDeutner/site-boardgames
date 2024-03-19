@@ -213,6 +213,19 @@ main {
   z-index: -999;
 }
 
+.text-carrossel{
+  margin-top: 350px ;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 20px;
+  background-color: #00000070;
+  text-align: center;
+}
+
+.container-text-carrossel{
+  margin-top: 350px ;
+  background-color: #0000005a;
+}
 
 #prevBtn,
 #nextBtn {
